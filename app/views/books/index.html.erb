@@ -1,8 +1,23 @@
+
+<h1>新規投稿</h1>
+
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
+
+  <h4>本のタイトル</h4>
+  <%= f.text_field :title %>
+  
+  <h4>感想</h4>
+  <%= f.text_area :body %>
+  
+  <%= f.submit '投稿' %>
+  
+<% end %> 
+
 <h1>投稿一覧</h1>
 
 <% @books.each do |book| %>
-
-  <p>タイトル</p>
+　<p>本のタイトル</p>
+  <p>感想</p>
   <span>
     <%= link_to book.title, book_path(book.id) %>
   </span>
