@@ -10,7 +10,7 @@ class BooksController < ApplicationController
       flash[:notice] = "投稿に成功しました。"
       redirect_to book_path(@book.id)
     else
-      flash[:notice] = "投稿に失敗しました。"
+      flash.now[:alert] = "投稿に失敗しました。"
       render :new
     end 
   end
