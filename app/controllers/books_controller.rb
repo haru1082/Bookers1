@@ -7,16 +7,17 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      flash[:notice] = "投稿に成功しました。"
+      flash[:notice] = "Successfully posted"
       redirect_to book_path(@book.id)
     else
-      flash.now[:alert] = "投稿に失敗しました。"
+      flash.now[:alert] = "Error:Posting failed"
       render :new
     end 
   end
 
   def index
     @books = Book.all
+    @book = Book.new
   end
 
   def show
