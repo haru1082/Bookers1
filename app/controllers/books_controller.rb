@@ -7,10 +7,10 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      flash[:notice] = "Successfully posted"
+      flash[:notice] = "successfully posted"
       redirect_to book_path(@book.id)
     else
-      flash.now[:alert] = "Error:Posting failed"
+      flash.now[:alert] = "error:Posting failed"
       render :new
     end 
   end
