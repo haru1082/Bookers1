@@ -1,25 +1,13 @@
-<!DOCTYPE HTML>
-<html>
- <head>
-  <style type ="text/css"></style>
-  <link rel ="stylesheet" media="all" href="application.css" date-turbolinks-track="reload">
-  <script src = "/assets/application"></script>
-  <title>Bookers1</title>
-  <meta name = "csrf-param" content = "authenticity_token">
-  <meta name = "csrf-token" content = "width=device-width,initial-scale=1">
- </head>
  <body>
   <p id = "notice"></p>
   <p>
-   <srong>Title:</srong>
-   "リーダブルコード"
+   <srong>Title:<%= @book.title %></srong>
+
   </p>
   <p>
-   <srong>Body:</srong>
-   "より良いコードを書くためのシンプルで実践的なテクニック"
+   <srong>Body:<%= @book.body %></srong>
   </p>
-  <a class = "edit_1" href = "/books/1/edit">Edit</a>
-  "|"
+  <a class = "dit_1" href = "/books/1/edit">Edit</a>
+   |
   <a class = "back" href = "/books">Back</a>
  </body>
-</html>
