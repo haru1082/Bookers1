@@ -31,14 +31,27 @@ body {
   color: green;
 }
 
+span {
+  width: 398px;
+  height: 18px;
+}
+
+
 h1 {
   width: 958px;
   height: 18px;
   margin: 17.42px 0;
-
 }
 
-p, ol, ul, td {
+.field {
+  margin :0px 0px 10px;
+}
+
+p {
+  margin :0px 0px 10px;
+}
+
+ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;

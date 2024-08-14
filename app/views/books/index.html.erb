@@ -52,14 +52,15 @@
   </ul>
 <% end %>
 
-<%= form_with model: @book do |f| %>
 
-  <h4>Title</h4>
-  <%= f.text_field :title %>
+ <%= form_with model: @book do |f| %>
+  <div class="field">
+   <h4>Title</h4>
+   <%= f.text_field :title %>
 
-  <h4>Body</h4>
-  <%= f.text_area :body %>
+   <h4>Body</h4>
+   <%= f.text_area :body %>
 
-  <p><%= f.submit 'Create Book' %></p>
-
-<% end %>
+   <p><%= f.submit 'Create Book' %></p>
+  </div>
+ <% end %>
