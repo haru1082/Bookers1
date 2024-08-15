@@ -1,11 +1,5 @@
- <head>
-  <style type ="text/css"></style>
-  <link rel ="stylesheet" media="all" href="application.css" date-turbolinks-track="recoad">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
- </head>
-
- <body>
-  <p id="notice"></p>
+ 
+ <p id="notice"></p>
   <h1>Books</h1>
 
   <table>
@@ -15,10 +9,8 @@
      <th class = "th-body">Body</th>
     </tr>
    </thead>
-  </table>
-  <% @books.each do |book| %>
-  <table>
    <tbody>
+   <% @books.each do |book| %>
     <tr>
      <td>
       <span class = book-title><%= book.title %></span>
@@ -33,18 +25,18 @@
       <a class= "edit" href= "<%= edit_book_path(book) %>">Edit</a>
      </td>
      <td>
-      <a dataa-confirm ="Are you sure?" class = "destroy" rel = "nofollow" data-method ="delete" href="<%= book_path(book) %>">Destroy</a>
+      <a data-confirm ="Are you sure?" class = "destroy" rel = "nofollow" data-method ="delete" href="<%= book_path(book) %>">Destroy</a>
      </td>
     </tr>
+   <% end %>
    </tbody>
   </table>
-  <% end %>
-</body>
+
 
 <h1>New Book</h1>
 
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>件のエラーが発生しました
+  <%= @book.errors.count %>errors prohibited this book from being saved:
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
